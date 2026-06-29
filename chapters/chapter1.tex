@@ -1,0 +1,104 @@
+\chapter{Przykładowy rozdział z ilustracjami, tabelą i tekstem}
+% Rozpoczęcie nowego rozdziału – jego tytuł pojawi się w spisie treści i nagłówkach
+
+\section{Wprowadzenie}
+% Sekcja – tytuł pojawi się w spisie treści
+
+% Przykładowy tekst akapitowy. 
+% Możesz tu dodać wprowadzenie teoretyczne, kontekst badawczy, przegląd literatury itd.
+% Zastosowanie \cite{} służy do cytowania źródeł z pliku refs.bib (literatura).
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel diam nec sapien tincidunt sodales. Curabitur non nisi vel sapien dignissim efficitur. Nulla facilisi. Sed id arcu mi. Vestibulum viverra ex vel nisl suscipit fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel diam nec sapien tincidunt sodales. Curabitur non nisi vel sapien dignissim efficitur. Nulla facilisi. Sed id arcu mi. Vestibulum viverra ex vel nisl suscipit fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel diam nec sapien tincidunt sodales. Curabitur non nisi vel sapien dignissim efficitur. Nulla facilisi. Sed id arcu mi. Vestibulum viverra ex vel nisl suscipit fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel diam nec sapien tincidunt sodales. Curabitur non nisi vel sapien dignissim efficitur. Nulla facilisi. Sed id arcu mi. Vestibulum viverra ex vel nisl suscipit fermentum \parencite{PortalAI_CzymJestSI}.
+
+\section{Wzory matematyczne}
+% Sekcja poświęcona wzorom matematycznym – używa środowiska equation
+
+% Poniżej przykład prostego wzoru matematycznego
+\begin{align}
+    f(x) = ax^2 + bx + c
+    \label{eq:funkcja_kwadratowa} % Etykieta umożliwia odwołanie się do wzoru w tekście
+\end{align}
+
+\begin{gdzie}
+    \item $a$ -- to cos 
+    \item $b$ -- to cos 
+    \item $x$ -- to cos 
+\end{gdzie}
+
+
+% Odwołanie do wzoru przez \ref{}
+% Przykład: "Zob. równanie (1)"
+% Równanie \ref{eq:funkcja_kwadratowa} ...
+Równanie \ref{eq:funkcja_kwadratowa} może mieć dwa, jeden lub zero pierwiastków rzeczywistych w zależności od wartości wyróżnika trójmianu kwadratowego.
+
+\section{Analiza i interpretacja}
+% Sekcja główna z dwiema podsekcjami
+
+\subsection{Podrozdział pierwszy}
+% Podsekcja z dodatkowym opisem
+
+% Przykładowy długi akapit, w którym można opisać analizę, interpretacje, wyniki itd.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, sapien nec feugiat fermentum, eros purus pulvinar augue, nec pretium nulla nunc sed neque. Sed ut turpis in felis tincidunt efficitur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, sapien nec feugiat fermentum, eros purus pulvinar augue, nec pretium nulla nunc sed neque. Sed ut turpis in felis tincidunt efficitur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, sapien nec feugiat fermentum, eros purus pulvinar augue, nec pretium nulla nunc sed neque. Sed ut turpis in felis tincidunt efficitur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, sapien nec feugiat fermentum, eros purus pulvinar augue, nec pretium nulla nunc sed neque. Sed ut turpis in felis tincidunt efficitur \parencite{article}.
+% \parencite{} – cytowanie w nawiasie (APA)
+
+\subsection{Podrozdział drugi z tabelą}
+% Przykład dodania tabeli do dokumentu
+
+% Środowisko table z komendą tabular – tabela z trzema kolumnami
+\begin{table}[ht]
+\centering
+\caption{Przykładowa tabela danych}
+\label{tab:przykladowa_tabela}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|c|c|}
+\hline
+\textbf{Kategoria} & \textbf{Wartość A} & \textbf{Wartość B} \\
+\hline
+Lorem ipsum        & 12                & 34                 \\
+Dolor sit amet     & 45                & 67                 \\
+Consectetur        & 89                & 10                 \\
+\hline
+\end{tabular}
+
+\vspace{4pt} % Mały odstęp między tabelą a źródłem
+{\raggedright\fontsize{10pt}{12pt}\selectfont\textit{Źródło: Opracowanie własne}\par}
+\end{table}
+
+
+
+% Odwołanie do tabeli
+Dane przedstawione w tabeli \ref{tab:przykladowa_tabela} mają charakter poglądowy.
+
+\section{Wizualizacja}
+% Sekcja z rysunkiem/grafiką
+
+% Dodanie rysunku przy użyciu zdefiniowanego wcześniej polecenia \MyFigure
+% Parametry:
+% - ścieżka do pliku
+% - podpis
+% - etykieta (do odwołania)
+% - źródło (np. publikacja, własna ilustracja itd.)
+\MyFigure{images/example-image.jpg}{Przykładowy rysunek}{rys:przykladowy_rysunek}{\parencite{article}}
+
+
+
+% Odwołanie do rysunku
+(rysunek \ref{rys:przykladowy_rysunek}) jest ilustracją poglądową, pokazującą użycie komendy \texttt{\textbackslash MyFigure}.
+
+
+\section{Numeracja}
+
+\begin{enumerate}
+    \item item1
+
+    \item item2
+\end{enumerate}
+
+\section{Implementacja kodu }
+\begin{lstlisting}[style=pythonstyle, caption={Przykład zastosowania }, label={code:przyklad}]
+import os
+
+# pogladowy kod
+X = 2+1+1+5
+\end{lstlisting}
+
+\clearpage
+% Wymuszenie rozpoczęcia nowej strony (opcjonalne)
