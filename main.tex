@@ -24,12 +24,111 @@
 \input{front.tex} % Tutaj znajduje się strona tytułowa, spis treści, oświadczenia itd.
 
 % *************** Treść rozdziałów *******-> 80-130 tys znakow
-\input{chapters/introduction}
+\chapter*{Wstęp}
+\addcontentsline{toc}{chapter}{Wstęp}
+Wprowadzenie do tematu, omówienie czym jest budzik oraz mikro kontroler.
+\chapter{Projekty innych ludzi}
+Przedstawienie projektów innych ludzi.
+Na chwilę obecną na google scolar udało mi się znaleść.
+\section{Zegarki}
+Choć mój projekt nie ma na celu prezentacji czasu na ekranie lcd lub w podobny sposób.
+Ważną częścią tego projektu jest pilnowanie która jest godzina.
+\newline\newline
+\parencite{lukman2016development} oraz \parencite{khan2012designing}
+\section{Budziki}
+\parencite{screws470digital}
+\section{Inne}
+Inne projekty które mają wspólne cech z tym co chciałem osiągnąć.
 
-\input{chapters/chapter1}
-\input{chapters/chapter2}
+\chapter{Co chcę osiągnąć}
+Wstęp do tego co chcemy osiągnąć
+\section{Cele osobiste}
+Celem jest zlikwidowanie potrzeby korzystanie z telefony jako budzik'a
+\section{Cele ogólne}
+Chciałbym stworzyć alarm z wykorzystaniem mikrokontroler'a ukrytego w pluszaku który można sterować na różne sposoby z telefonu lub komputer'a.
+Dodatkowo chciał bym udostępnić możliwość tworzenia własnych dźwięków budzika użytkowniką.
+\chapter*{Teoria}
+\addcontentsline{toc}{chapter}{Teoria}
+krótki wstęp do tego co chcemy zrobić
+\chapter{Technologie}
+krótki wstęp do wykorzystywanych technologii do osiągniecia naszego celu
+\section{Raspberry pi pico 2}
+mikro kontroler który będę programować
+\subsection{C++}
+język który będę wykorzystywać
+\subsection{FreeRTOS}
+bibliteka/system do zadań asynchronicznych
+\subsection{Pi pico maker mini}
+nakładka (HAT) raspberry pi pico który będę wykożystywać
+\newline\newline
+posiada złącze na baterie oraz bzyczek
+\section{Opakowanie}
+opis metod wykorzystywanych do tworzenie pluszaka w którym zamkniemy nasz mikrontroler
+\section{Klient do alarmu}
+(z angielskiego client) interfejsy po których komunikacja z mikrokontrolerem będzie możliwa
+\subsection{Strona internetowa}
+strona wykożystujące interfejs REST API mikrokontrolera do komunikacji z nim
+\newline\newline
+dodatkowo kożystająca z technologii PWA/serviceworkerów pozwalającej wczytać pliki graficzne, html, css oraz javascript raz a następnie przechowywanie ich w przeglądarce.
+\subsection{CLI}
+tak zwany commandline interface pozwalał by na komunikacje z urządzeniem z terminal'a również za pomocą REST API
+\newline\newline
+napisany albo w C++ albo Deno/Typescript (Łatwiejsza opcja).
+\subsubsection{Projekt interfejsu CLI}
+projekt faktycznego interfejsu wierszu poleceń zgodnie z filozowią unix (programów robięcych jedną rzecz dobrze które można ze sobą połączyć)
+\subsection{Aplikacja natywna}
+napisana w bibliotece GTK4/Adwait'a (możliwa zmiana) pozwalała by na kontrole alarmu bez użycia przeglądarki lub terminala zarówno na telefonie jak i komputerze.
+\newline\newline
+dodatkowo dzięki wykorzystaniu natywnej biblioteki zamiast pakowania Electro'u aplikacja będzie znacznie miej zasobożerna niż przeglądarka internetowa.
+\chapter*{Praktyka}
+\addcontentsline{toc}{chapter}{Praktyka}
+wstęp do faktycznej budowy gotowego rozwiązania
+\chapter{Oprogramowanie mikrokontrolera}
+w tej sekcji zajmować się będę tworzeniem oprogramowania do mikrokontrolera.
+\section{Komunikacja bezprzewodowa}
+programowanie chip'u wifi obecnego na mikrokontrolerze
+w tym API REST
+\section{NTP}
+programowanie systemu pilnowania czasu
+\section{Bzyczek}
+programowanie sygnału dźwiękowego
+\chapter{Opakowanie dla mikrokontrolera}
+wstęp do budowy opakowanie
+\section{Tworzenie pluszaka}
+proces tworzenia pluszaka w którym zamkniemy nasz mikrokontroler
+\section{Wypełnianie wnętrza pluszaka}
+składanie peryfieriów i kabli do kupy.
+\chapter{Tworzenie strony internetowe}
+wstęp do tworzenia strony internetowej
+\section{Budowa interfejsu webowego}
+w tej sekcji opisuwany będzie proces tworzenia strony internetowej do interakcji z urządzeniem.
+\section{PWA}
+wykorzystanie technologii pwa do zapisywania strony w przeglądarce internetowej.
+\chapter{Budowa aplikacji CLI}
+wstęp do tworzenia aplikacji cli
+\section{Implementacji wcześniej zaprojektowanego interfejsu}
+w tej sekcji opisuwany będzie proces tworzenia aplikacji cli.
+\chapter{Programowanie aplikacji natywnej}
+wstęp do tworzenia aplikacji natywnej
+\section{Tworzenie interfejsu graficznego}
+w tej sekcji opisuwany będzie proces tworzenia aplikacji natywnej od strony wyglądu.
+\section{Programowanie interfejsu graficznego}
+w tej sekcji będziemy programować funkcjonalną część aplikacji
+\chapter*{Podsumowanie}
+\addcontentsline{toc}{chapter}{Podsumowanie}
+Podsumowanie wyników mojej pracy
+To jest mój projekt i się udał.
+\chapter{Testy i wnioski}
+Raport z faktycznego użytku przygotowanego rozwiązania
+\chapter{Co dalej?}
+co można by było ulepszyć/dodać do mojego projektu
 
-\input{chapters/ending}
+% \input{chapters/introduction}
+
+% \input{chapters/chapter1}
+% \input{chapters/chapter2}
+
+% \input{chapters/ending}
 
 
 % *************** Bibliografia ***************
